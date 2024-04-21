@@ -18,7 +18,7 @@
     require_once 'conexao.php';
     // Mesclar Funcoes de conexao.php
 
-    $p = new Pessoa('Rose', '127.0.0.1', 'root', 'root');
+    $p = new Pessoa('rose', 'localhost', 'root', '');
 
     if (isset($_POST['nome_dono'])) {
         $nome_dono = addslashes($_POST['nome_dono']);
@@ -75,7 +75,7 @@
         </div>
         <br>
 
-        <!-- data -->
+
         <table>
             <tr>
                 <td>

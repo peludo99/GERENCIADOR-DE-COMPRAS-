@@ -5,16 +5,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/modificar.css">
     <title>Faturas!</title>
 </head>
 
-<body class="meio">
+<body class="body">
 
-    <div>
+    <div class="meio">
 
         <div class="jumbotron">
             <h1 class="display-4">Seja bem-vindo!</h1>

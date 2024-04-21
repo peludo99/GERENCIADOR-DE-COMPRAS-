@@ -2,7 +2,22 @@
     width: auto;
     margin-left: 2%;
     margin-right: 2%;
-    margin-top: 0;
-    background-color: rgb(194, 196, 197);
+    margin-top: 2%;
+    
 
+}
+
+.body
+{
+    background-color: rgb(194, 196, 197);
+}
+
+
+@media screen and (max-width: 500px)
+{
+    /* telas menores que 500px */
+    .pop
+    {
+        background-image: image-set();
+    }
 }

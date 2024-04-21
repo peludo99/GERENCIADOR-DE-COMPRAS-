@@ -12,47 +12,34 @@
     <title>Confirmar</title>
 </head>
 
-<body class="meio">
-    <?php
-    require_once 'conexao.php';
-
-    $p = new Pessoa('Rose', '127.0.0.1', 'root', 'root');
-
-    if (isset($_GET["id"])) {
-        $pesquisar = $_GET["id"];
-
-        $p->SubtrairPestacoes($pesquisar);
-    }
-
-
-
-
-
-
-    ?>
-
-
-
-    <table>
-        <tr>
-            <td>
-                <h1>Pagamento foi Confirmado</h1>
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h3>Seus valores foram atualizados:</h3>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <h5> Aguarde o Sistema redireciona-lo(la)...</h5>
-            </td>
-        </tr>
-    </table>
-
+<body class="body">
+    <div class="meio">
+        <?php
+        require_once 'conexao.php';
+        $p = new Pessoa('rose', 'localhost', 'root', '');
+        if (isset($_GET["id"])) {
+            $pesquisar = $_GET["id"];
+            $p->SubtrairPestacoes($pesquisar);
+        }
+        ?>
+        <table>
+            <tr>
+                <td>
+                    <h1>Pagamento foi Confirmado</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Seus valores foram atualizados:</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5> Aguarde o Sistema redireciona-lo(la)...</h5>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 
     <!-- Optional JavaScript; choose one of the two! -->

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <!-- a -->
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,121 +13,87 @@
     <title>Consultar</title>
 </head>
 
-<body class="meio">
+<body class="body">
 
-    <table>
-        <tr>
-
-
-            <form class="d-flex" action="consultar_fatura.php" method="post">
-                <input class="form-control me-2" type="number" placeholder="Digite o cpf do comprador" aria-label="Search" name="buscar" required>
-        </tr>
-        <tr>
-            <td>
-                <br>
-                <button class="btn btn-success" type="submit">Consultar</button>
-                <br>
-                </form>
-            </td>
-        </tr>
-    </table>
-    <br>
-    <table class="table table-hover table-dark">
-        <thead>
+    <div class="meio">
+        <table>
             <tr>
-                <th scope="col">N</th>
-                <th scope="col">CPF</th>
-                <th scope="col">Nome fatura</th>
-                <th scope="col">Mensalidade</th>
-                <th scope="col">Prestaçao</th>
-
-                <th scope="col">ID</th>
-
-
+                <form class="d-flex" action="consultar_fatura.php" method="post">
+                    <input class="form-control me-2" type="number" placeholder="Digite o cpf do comprador" aria-label="Search" name="buscar" required>
             </tr>
-        </thead>
-
-        <?php
-
-        require_once 'conexao.php';
-
-        $p = new Pessoa('Rose', '127.0.0.1', 'root', 'root');
-
-        if (isset($_POST['buscar'])) {
-            $pesquisar = $_POST['buscar'];
-            $p->DeletarFaturas($pesquisar);
-            $resu = $p->buscarDados($pesquisar);
-            $valor = $p->buscarValor($pesquisar);
-            
-            
-
-
-            echo "<tbody>";
-            if (count($resu) > 0) {
-                for ($i = 0; $i < count($resu); $i++) {
-                    echo "<tr>";
-                    echo "<th scope='row'>" . $i + 1;
-
-                    foreach ($resu[$i] as $k => $v) {
-                        echo "<th scope='col'>" . $v . "</th>";
-                    }
-                    echo "</th>";
-                }
-            }
-        }
-
-        ?>
-    </table>
-    </tbody>
-
-    <table>
-        <tr>
-            <table class="table table-hover table-dark">
-                <thead>
-                    <tr>
-
-                        <?php
-                        echo "<th scope='col'>Valor a Pagar: R$ ";
-
-                        if (isset($_POST['buscar'])) {
-
-
-                            foreach ($valor[0] as $key => $v) {
-
-                                echo print_r($v);
-                            }
-
-                            echo "<form action='confirmar_pagamento.php?id=$pesquisar' method='post'>
-                            <th style='width: 200px;' scope='col'>
-                                <input type='submit' value='Confirmar pagamento' class='btn btn-danger'>
-                            </th>
-                        </form>";
+            <tr>
+                <td>
+                    <br>
+                    <button class="btn btn-success" type="submit">Consultar</button>
+                    <br>
+                    </form>
+                </td>
+                <td>
+                    <br>
+                    <a class="btn btn-warning" href="./tela_inicial.php">Voltar</a>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">N</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Nome fatura</th>
+                    <th scope="col">Mensalidade</th>
+                    <th scope="col">Prestaçao</th>
+                    <th scope="col">ID</th>
+                </tr>
+            </thead>
+            <?php
+            require_once 'conexao.php';
+            $p = new Pessoa('rose', 'localhost', 'root', '');
+            if (isset($_POST['buscar'])) {
+                $pesquisar = $_POST['buscar'];
+                $p->DeletarFaturas($pesquisar);
+                $resu = $p->buscarDados($pesquisar);
+                $valor = $p->buscarValor($pesquisar);
+                echo "<tbody>";
+                if (count($resu) > 0) {
+                    for ($i = 0; $i < count($resu); $i++) {
+                        echo "<tr>";
+                        echo "<th scope='row'>" . $i + 1;
+                        foreach ($resu[$i] as $k => $v) {
+                            echo "<th scope='col'>" . $v . "</th>";
                         }
                         echo "</th>";
-
-
-
-                        ?>
-
-
-
-
-
-
-
-                    </tr>
-
-
-                </thead>
-            </table>
-        </tr>
-
-
-
-
-
-    </table>
-
+                    }
+                }
+            }
+            ?>
+        </table>
+        </tbody>
+        <table>
+            <tr>
+                <table class="table table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <?php
+                            echo "<th scope='col'>Valor a Pagar: R$ ";
+                            if (isset($_POST['buscar'])) {
+                                foreach ($valor[0] as $key => $v) {
+                                    echo print_r($v);
+                                }
+                                echo "<form action='confirmar_pagamento.php?id=$pesquisar' method='post'>
+                                <th style='width: 200px;' scope='col'>
+                                    <input type='submit' value='Confirmar pagamento' class='btn btn-danger'>
+                                </th>
+                            </form>";
+                            }
+                            echo "</th>";
+                            ?>
+                        </tr>
+                    </thead>
+                </table>
+            </tr>
+        </table>
+    </div>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
