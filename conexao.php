@@ -44,14 +44,26 @@ class Pessoa
     }
 
     public function buscarValor($nome_dono)
-    {
-        $res =  "";
-        $cmd = $this->pdo->prepare("SELECT SUM(mensalidade) FROM `faturas` WHERE nome_dono = :n");
-        $cmd->bindValue(":n", $nome_dono);
-        $cmd->execute();
-        $res = $cmd->fetchAll(PDO::FETCH_ASSOC);
-        return $res;
+{
+    $res = "";
+    $cmd = $this->pdo->prepare("SELECT SUM(mensalidade) AS total_mensalidade FROM `faturas` WHERE nome_dono = :n");
+    $cmd->bindValue(":n", $nome_dono);
+    $cmd->execute();
+
+    // Busca a primeira linha (supondo que haja apenas um resultado)
+    $linha = $cmd->fetch(PDO::FETCH_ASSOC);
+    if ($linha) {
+        // Extrai o valor de total_mensalidade
+        $totalMensalidade = $linha['total_mensalidade'];
+
+        // Formata o valor de total_mensalidade com duas casas decimais
+        $mensalidadeFormatada = number_format($totalMensalidade, 2, '.', '');
+
+        $res = $mensalidadeFormatada;
     }
+
+    return $res;
+}
 
 
 

@@ -58,7 +58,7 @@
                 if (count($resu) > 0) {
                     for ($i = 0; $i < count($resu); $i++) {
                         echo "<tr>";
-                        echo "<th scope='row'>" . $i + 1;
+                        echo "<th scope='row'>" . $i +1;
                         foreach ($resu[$i] as $k => $v) {
                             echo "<th scope='col'>" . $v . "</th>";
                         }
@@ -75,11 +75,10 @@
                     <thead>
                         <tr>
                             <?php
-                            echo "<th scope='col'>Valor a Pagar: R$ ";
-                            if (isset($_POST['buscar'])) {
-                                foreach ($valor[0] as $key => $v) {
-                                    echo print_r($v);
-                                }
+                            echo "<th class='col'>Valor a Pagar: R$ ";
+                            if (isset($_POST['buscar'])) 
+                            {
+                                echo $valor;
                                 echo "<form action='confirmar_pagamento.php?id=$pesquisar' method='post'>
                                 <th style='width: 200px;' scope='col'>
                                     <input type='submit' value='Confirmar pagamento' class='btn btn-danger'>

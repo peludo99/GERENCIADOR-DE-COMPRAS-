@@ -3,21 +3,35 @@
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 2%;
-    
+
 
 }
 
-.body
-{
-    background-color: rgb(194, 196, 197);
+.centro {
+    width: 0;
+    margin-left: 300px;
+    margin-right: 2%;
+    margin-top: 2%;
+
+
 }
 
 
-@media screen and (max-width: 500px)
-{
+
+
+
+
+.centralizar {
+    width: auto;
+    margin-left: 1000px;
+    margin-right: 200px;
+}
+
+
+@media screen and (max-width: 500px) {
+
     /* telas menores que 500px */
-    .pop
-    {
+    .pop {
         background-image: image-set();
     }
 }

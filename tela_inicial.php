@@ -9,30 +9,72 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/modificar.css">
     <title>Faturas!</title>
+
+    <style>
+        body {
+            background-image: url(./assets/tela_inicial.png);
+            background-size: 1400px 641px;
+            background-color: clay;
+            width: 50%;
+            margin-top: 15%;
+            background: color(rgb(2, 0, 36));
+            background: linear-gradient(0deg, rgba(2, 0, 36, 1) 9%, rgba(164, 14, 177, 1) 97%);
+            background-repeat: no-repeat;
+        }
+
+        table {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 0%;
+            border-collapse: separate;
+
+            border: 1px solid black;
+        }
+
+        td {
+
+            padding: 5px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div.cor {
+            color: white;
+        }
+    </style>
 </head>
 
-<body class="body">
+<body>
 
-    <div class="meio">
 
-        <div class="jumbotron">
-            <h1 class="display-4">Seja bem-vindo!</h1>
-            <p class="lead">Esse e o site que vai gerenciar suas compras no cartao de credito de outra pessoa.</p>
-            <hr class="my-4">
-            <p>utilize os botoes abaixo para a navegaçao.</p>
-            <table>
-                <tr>
-                    <td><a class="btn btn-primary btn-lg" href="./adicionar_fatura.php" role="button">Adicionar faturas</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a class="btn btn-primary btn-lg" href="./consultar_fatura.php" role="button">Consultar faturas</a>
-                    </td>
-                </tr>
-            </table>
-        </div>
 
-    </div>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h1>Seja bem-vindo</h1>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h2>Soluções para Cartões de Credito Compartilhado</h2>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="./adicionar_fatura.php">Adicionar Compra</a>
+            </td>
+            <td>
+                <a href="./consultar_fatura.php">Consultar Extrato</a>
+            </td>
+        </tr>
+
+    </table>
+
 
 
 
