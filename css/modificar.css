@@ -1,3 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   background-color: rgb(179, 182, 182);
+}
+
+
 .meio {
     width: auto;
     margin-left: 2%;
@@ -16,6 +26,31 @@
 
 }
 
+.tabela{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    margin: 20%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    background-color: azure;
+
+}
+
+.add{
+    padding: 10px;
+}
+
+.texto{
+    height: 10%;
+    
+}
+
 
 
 
@@ -28,10 +63,3 @@
 }
 
 
-@media screen and (max-width: 500px) {
-
-    /* telas menores que 500px */
-    .pop {
-        background-image: image-set();
-    }
-}

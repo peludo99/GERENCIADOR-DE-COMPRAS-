@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/modificar.css">
     <title>Faturas!</title>
+
+    <style>
+     
+
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: azure;
+           
+
+            font-size: 80px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body class="meio">
@@ -47,55 +60,49 @@
     ?>
     <br>
 
-    <h1>Faturas</h1>
+   
 
-    <form method="post">
-        <!-- Nome do Comprador -->
-        <div class="forms-goup">
-            <label for="nome">CPF</label>
-            <input type="number" name="nome_dono" class="form-control" required placeholder="Digite apenas os numeros">
-        </div>
+    <div class="add">
 
-        <!-- Nome fatura -->
-        <div class="forms-goup">
-            <label for="nome_fatura">Nome da Compra</label>
-            <input type="text" name="nome_fatura" class="form-control" required placeholder="De um nome a sua compra Exemplo: Amazon.">
-        </div>
-
-        <!-- mensalidade -->
-        <div class="forms-goup">
-            <label for="mensalidade">Valor da Mensalidade</label>
-            <input type="number" name="mensalidade" step="0.01" class="form-control" required placeholder="Sempare os decimais por '.' EX: R$34.54">
-        </div>
-
-        <!-- Prestacoes -->
-        <div class="forms-goup">
-            <label for="prestacoes">Prestaçoes</label>
-            <input type="number" name="prestacoes" class="form-control" required placeholder="Em quantas vezes a compra foi dividida?">
-        </div>
-        <br>
-
-
-        <table>
-            <tr>
-                <td>
-
-
-                    <!-- botao enviar -->
-                    <label for="botao"></label>
-                    <input type="submit" class="btn btn-success" value="Enviar">
-    </form>
-    </td>
-    <td>
-
-
-        <form action="tela_inicial.php" method="post">
-            <label for="botao"></label>
-            <input type="submit" class="btn btn-danger" value="Voltar">
+        <form method="post">
+            <!-- Nome do Comprador -->
+            <div class="forms-goup">
+                <label for="nome">CPF</label>
+                <input type="number" name="nome_dono" class="form-control" required placeholder="Digite apenas os numeros">
+            </div>
+            <!-- Nome fatura -->
+            <div class="forms-goup">
+                <label for="nome_fatura">Nome da Compra</label>
+                <input type="text" name="nome_fatura" class="form-control" required placeholder="De um nome a sua compra Exemplo: Amazon.">
+            </div>
+            <!-- mensalidade -->
+            <div class="forms-goup">
+                <label for="mensalidade">Valor da Mensalidade</label>
+                <input type="number" name="mensalidade" step="0.01" class="form-control" required placeholder="Sempare os decimais por '.' Exemplo: R$34.54">
+            </div>
+            <!-- Prestacoes -->
+            <div class="forms-goup">
+                <label for="prestacoes">Prestaçoes</label>
+                <input type="number" name="prestacoes" class="form-control" required placeholder="Em quantas vezes a compra foi dividida?">
+            </div>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <!-- botao enviar -->
+                        <label for="botao"></label>
+                        <input type="submit" class="btn btn-success" value="Enviar">
         </form>
-    </td>
-    </tr>
-    </table>
+        </td>
+        <td>
+            <form action="tela_inicial.php" method="post">
+                <label for="botao"></label>
+                <input type="submit" class="btn btn-danger" value="Voltar">
+            </form>
+        </td>
+        </tr>
+        </table>
+    </div>
 
 
 

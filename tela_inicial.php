@@ -11,35 +11,32 @@
     <title>Faturas!</title>
 
     <style>
-        body {
-            background-image: url(./assets/tela_inicial.png);
-            background-size: 1400px 641px;
-            background-color: clay;
-            width: 50%;
-            margin-top: 15%;
-            background: color(rgb(2, 0, 36));
-            background: linear-gradient(0deg, rgba(2, 0, 36, 1) 9%, rgba(164, 14, 177, 1) 97%);
-            background-repeat: no-repeat;
-        }
-
         table {
-            width: 80%;
-            margin-left: 10%;
-            margin-right: 0%;
-            border-collapse: separate;
 
-            border: 1px solid black;
+
+            width: 80%;
+            margin: auto;
+
         }
 
         td {
 
             padding: 5px;
-            border: 1px solid black;
+
             text-align: center;
+           
         }
 
         div.cor {
             color: white;
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
     </style>
 </head>
@@ -48,32 +45,29 @@
 
 
 
-    <table>
-        <tr>
-            <td colspan="2">
-                <h1>Seja bem-vindo</h1>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <h2>Soluções para Cartões de Credito Compartilhado</h2>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <hr>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="./adicionar_fatura.php">Adicionar Compra</a>
-            </td>
-            <td>
-                <a href="./consultar_fatura.php">Consultar Extrato</a>
-            </td>
-        </tr>
-
-    </table>
+    <div class="tabela">
+        <table>
+           
+            <tr>
+                <td colspan="2">
+                    <h2>Soluções para Cartões de Credito Compartilhados</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a type="button" href="./adicionar_fatura.php" class="btn btn-outline-primary">Adicionar Compra</a>
+                </td>
+                <td>
+                    <a type="button" href="./consultar_fatura.php" class="btn btn-outline-primary">Consultar Extrato</a>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 
 
